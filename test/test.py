@@ -1,9 +1,10 @@
 # SPDX-FileCopyrightText: © 2024 Tiny Tapeout
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: MIT
 
 import cocotb
 from cocotb.clock import Clock
 from cocotb.triggers import ClockCycles
+from cocotb.triggers import FallingEdge
 
 
 @cocotb.test()
@@ -25,16 +26,44 @@ async def test_project(dut):
 
     dut._log.info("Test project behavior")
 
+    for i in range(0, 10):
+        dut._log.info(f"Test n={i}")
+        fib_n = await get_fib_n(dut, i)
+        fib_n_int = int(fib_n)
+        calc_fib = calc_fib_n(i)
+        dut._log.info(f"hw fib: {fib_n_int}, sw fib: {calc_fib}")
+        assert fib_n == calc_fib
+
+async def get_fib_n(dut, n):
     # Set the input values you want to test
-    dut.ui_in.value = 20
-    dut.uio_in.value = 30
+    dut.ui_in.value = n
+    dut.uio_in.value = 1
 
-    # Wait for one clock cycle to see the output values
+    # Wait for one clock cycle, then clear the strobe pin
     await ClockCycles(dut.clk, 1)
+    dut.uio_in.value = 0
 
-    # The following assersion is just an example of how to check the output values.
-    # Change it to match the actual expected output of your module:
-    assert dut.uo_out.value == 50
+    busy_val = True
 
-    # Keep testing the module by changing the input values, waiting for
-    # one or more clock cycles, and asserting the expected output values.
+    while busy_val:
+        # Wait for one clock cycle, then check the output
+        await ClockCycles(dut.clk, 1)
+        out_val = int(dut.uio_out.value)
+        busy_val = (out_val & 0x02) != 0
+
+    return dut.uo_out.value
+
+def calc_fib_n(n):
+    a = 0
+    b = 1
+    c = 0
+    if n == 0:
+        return a
+
+    for _ in range(1, n):
+        c = a + b
+        a = b
+        b = c
+
+    return b
+
