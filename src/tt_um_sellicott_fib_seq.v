@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_sellicott_fib_seq (
+module tt_um_example (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -36,5 +36,6 @@ module tt_um_sellicott_fib_seq (
     assign uio_oe [7:0] = 8'h2;
     assign uio_out[7:2] = 6'h0;
     assign uio_out[0]   = 1'h0;
+    wire _unused = &{ena,clk,rst_n};
 
 endmodule
