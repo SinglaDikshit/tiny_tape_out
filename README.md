@@ -14,8 +14,6 @@ The design was created using **Verilog HDL** and targets fabrication through the
 ### **Project Goal:**  
 To implement and fabricate a simple digital design to solidify my understanding of RTL-to-GDSII workflows and ASIC hardware design.
 
-> Example project: 4-bit counter, FSM, or a small ALU (you can specify your exact project here)
-
 ---
 
 ## 🚀 Getting Started with This Project
@@ -76,11 +74,5 @@ Go to **Repository Settings** > **Pages** > Enable pages from the `/docs` folder
 ✅ Learn industry tools like OpenLane  
 ✅ Fabricate a real silicon chip for my portfolio  
 
----
-
-## 📬 Contact
-If you'd like to collaborate or learn more about my ASIC journey, feel free to connect:
-- **LinkedIn:** [Dikshit Singla](#)
-- **GitHub:** [your-github-username](#)
 
 
