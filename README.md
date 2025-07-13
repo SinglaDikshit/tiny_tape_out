@@ -1,33 +1,86 @@
-![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg) ![](../../workflows/test/badge.svg) ![](../../workflows/fpga/badge.svg)
-
-# Tiny Tapeout Verilog Project Template
-
-- [Read the documentation for project](docs/info.md)
+# 📦 Dikshit Singla's Tiny Tapeout Verilog Project
 
 ## What is Tiny Tapeout?
+[Tiny Tapeout](https://tinytapeout.com) is an **educational project** that makes it possible for students, hobbyists, and engineers to get their **digital or analog circuits manufactured** as real silicon chips — at very low cost.  
+It lowers the barrier for learning and experimenting with **ASIC design and fabrication**.
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital and analog designs manufactured on a real chip.
+---
 
-To learn more and get started, visit https://tinytapeout.com.
+## 🔧 Project Description
 
-## Set up your Verilog project
+This project is part of my personal learning journey in **ASIC design and Verilog development**.  
+The design was created using **Verilog HDL** and targets fabrication through the **Tiny Tapeout shuttle program**.  
 
-1. Add your Verilog files to the `src` folder.
-2. Edit the [info.yaml](info.yaml) and update information about your project, paying special attention to the `source_files` and `top_module` properties. If you are upgrading an existing Tiny Tapeout project, check out our [online info.yaml migration tool](https://tinytapeout.github.io/tt-yaml-upgrade-tool/).
-3. Edit [docs/info.md](docs/info.md) and add a description of your project.
-4. Adapt the testbench to your design. See [test/README.md](test/README.md) for more information.
+### **Project Goal:**  
+To implement and fabricate a simple digital design to solidify my understanding of RTL-to-GDSII workflows and ASIC hardware design.
 
-The GitHub action will automatically build the ASIC files using [OpenLane](https://www.zerotoasiccourse.com/terminology/openlane/).
+> Example project: 4-bit counter, FSM, or a small ALU (you can specify your exact project here)
 
-## Enable GitHub actions to build the results page
+---
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+## 🚀 Getting Started with This Project
 
-## Resources
 
-- [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
-- [Join the community](https://tinytapeout.com/discord)
-- [Build your design locally](https://www.tinytapeout.com/guides/local-hardening/)
+---
+
+### **Steps to Use This Project**
+
+1. 🔧 **Edit Verilog Files**
+    - Place your Verilog source code in the `src/` directory.
+
+2. ✏️ **Update info.yaml**
+    - Fill in:
+        - `source_files`: list of your `.v` files.
+        - `top_module`: name of your top-level module.
+    - Validate the file using [Tiny Tapeout YAML migration tool](https://tinytapeout.com).
+
+3. 📝 **Document Your Project**
+    - Edit `docs/info.md` to describe:
+        - What your design does.
+        - How to test it.
+        - Any unique aspects of your implementation.
+
+4. 🧪 **Write & Adapt Testbenches**
+    - Place testbenches in `test/`
+    - See `test/README.md` for guidance.
+
+---
+
+## 🔨 Building the Project
+GitHub Actions are already configured.  
+Once you push your changes:
+1. The build flow runs **OpenLane**.
+2. Your project will generate the required files for submission.
+
+---
+
+## 🌐 Enabling GitHub Pages
+Once built, the results page will be available via GitHub Pages.
+
+Go to **Repository Settings** > **Pages** > Enable pages from the `/docs` folder.
+
+---
+
+## 🛠️ Resources
+- [Tiny Tapeout Official Website](https://tinytapeout.com)
+- [Digital Design Lessons](https://tinytapeout.com/digital-lessons/)
+- [How Semiconductors Work](https://tinytapeout.com/how-semiconductors-work/)
+- [Tiny Tapeout FAQ](https://tinytapeout.com/faq/)
+- [Join the Community Discord](https://discord.gg/UDRY6p2)
+
+---
+
+## 💡 Why This Project?
+✅ Hands-on experience with ASIC flows  
+✅ Practice writing Verilog for real hardware  
+✅ Learn industry tools like OpenLane  
+✅ Fabricate a real silicon chip for my portfolio  
+
+---
+
+## 📬 Contact
+If you'd like to collaborate or learn more about my ASIC journey, feel free to connect:
+- **LinkedIn:** [Dikshit Singla](#)
+- **GitHub:** [your-github-username](#)
+
 
