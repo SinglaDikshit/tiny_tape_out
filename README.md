@@ -1,4 +1,4 @@
-# 📦 Dikshit Singla's Tiny Tapeout Verilog Project
+# Tiny Tapeout Verilog Project
 
 ## What is Tiny Tapeout?
 [Tiny Tapeout](https://tinytapeout.com) is an **educational project** that makes it possible for students, hobbyists, and engineers to get their **digital or analog circuits manufactured** as real silicon chips — at very low cost.  
@@ -6,7 +6,7 @@ It lowers the barrier for learning and experimenting with **ASIC design and fabr
 
 ---
 
-## 🔧 Project Description
+##  Project Description
 
 This project is part of my personal learning journey in **ASIC design and Verilog development**.  
 The design was created using **Verilog HDL** and targets fabrication through the **Tiny Tapeout shuttle program**.  
@@ -16,35 +16,35 @@ To implement and fabricate a simple digital design to solidify my understanding 
 
 ---
 
-## 🚀 Getting Started with This Project
+##  Getting Started with This Project
 
 
 ---
 
 ### **Steps to Use This Project**
 
-1. 🔧 **Edit Verilog Files**
+1.  **Edit Verilog Files**
     - Place your Verilog source code in the `src/` directory.
 
-2. ✏️ **Update info.yaml**
+2.  **Update info.yaml**
     - Fill in:
         - `source_files`: list of your `.v` files.
         - `top_module`: name of your top-level module.
     - Validate the file using [Tiny Tapeout YAML migration tool](https://tinytapeout.com).
 
-3. 📝 **Document Your Project**
+3.  **Document Your Project**
     - Edit `docs/info.md` to describe:
         - What your design does.
         - How to test it.
         - Any unique aspects of your implementation.
 
-4. 🧪 **Write & Adapt Testbenches**
+4.  **Write & Adapt Testbenches**
     - Place testbenches in `test/`
     - See `test/README.md` for guidance.
 
 ---
 
-## 🔨 Building the Project
+##  Building the Project
 GitHub Actions are already configured.  
 Once you push your changes:
 1. The build flow runs **OpenLane**.
@@ -52,14 +52,14 @@ Once you push your changes:
 
 ---
 
-## 🌐 Enabling GitHub Pages
+##  Enabling GitHub Pages
 Once built, the results page will be available via GitHub Pages.
 
 Go to **Repository Settings** > **Pages** > Enable pages from the `/docs` folder.
 
 ---
 
-## 🛠️ Resources
+##  Resources
 - [Tiny Tapeout Official Website](https://tinytapeout.com)
 - [Digital Design Lessons](https://tinytapeout.com/digital-lessons/)
 - [How Semiconductors Work](https://tinytapeout.com/how-semiconductors-work/)
@@ -68,7 +68,7 @@ Go to **Repository Settings** > **Pages** > Enable pages from the `/docs` folder
 
 ---
 
-## 💡 Why This Project?
+##  Why This Project?
 ✅ Hands-on experience with ASIC flows  
 ✅ Practice writing Verilog for real hardware  
 ✅ Learn industry tools like OpenLane  
